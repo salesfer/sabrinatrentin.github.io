@@ -228,11 +228,113 @@ footer{
     height:36px;
   }
 }
+/* Header minimalista */
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(243,238,232,0.78);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(122,92,69,0.14);
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 0;
+}
+
+.brand{
+  font-family:'Playfair Display', serif;
+  font-size:18px;
+  letter-spacing:.2px;
+  color: var(--text-main);
+}
+
+.nav-cta{
+  padding:10px 14px;
+  border-radius:999px;
+  background: var(--bg-soft);
+  border:1px solid rgba(122,92,69,0.18);
+  color: var(--text-main);
+  font-size:14px;
+  font-weight:600;
+}
+
+/* Seções com demarcação minimalista */
+.band{
+  padding:72px 20px;
+  border-top: 1px solid rgba(122,92,69,0.10);
+}
+
+.band-soft{
+  background: var(--bg-soft);
+}
+
+.content{
+  max-width:760px;
+}
+
+.content p{ margin:14px 0; }
+
+.content ul{
+  margin: 14px 0 0 18px;
+  padding:0;
+}
+
+.content li{ margin:8px 0; }
+
+/* WhatsApp flutuante premium (somente ícone) */
+.wa-float{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:9999;
+  width:56px;
+  height:56px;
+  border-radius:999px;
+  display:grid;
+  place-items:center;
+  background:#ffffff;
+  border:1px solid rgba(122,92,69,0.18);
+  box-shadow:0 16px 40px rgba(0,0,0,0.14);
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.wa-float:hover{
+  transform:translateY(-2px);
+  box-shadow:0 20px 48px rgba(0,0,0,0.16);
+  border-color: rgba(122,92,69,0.28);
+}
+
+.wa-dot{
+  width:40px;
+  height:40px;
+  border-radius:999px;
+  display:grid;
+  place-items:center;
+  background:#a3563a;
+  box-shadow:0 10px 22px rgba(163,86,58,0.28);
+}
+
+@media (max-width:480px){
+  .wa-float{ right:14px; bottom:14px; }
+}
+
 
 </style>
 </head>
 
 <body>
+  <body>
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="brand" href="#top">Sabrina Trentin</a>
+    <a class="nav-cta" href="https://wa.me/5541996257555" target="_blank" rel="noopener">Contato</a>
+  </div>
+</header>
 
 <section class="hero">
   <div class="container">
@@ -242,9 +344,7 @@ footer{
         Para quem sustenta decisões, pessoas e responsabilidades — e percebe que,
         em algum ponto, precisa cuidar do que sustenta tudo isso.
       </p>
-      <a class="btn" href="https://wa.me/5541996257555" target="_blank">
-        Entrar em contato
-      </a>
+      <a class="btn" href="https://wa.me/5541996257555" target="_blank" rel="noopener">Entrar em contato</a>
     </div>
 
     <div>
@@ -253,119 +353,113 @@ footer{
   </div>
 </section>
 
-<section>
+<section class="band band-soft" id="clinica">
   <div class="container">
-    <h2>Psicoterapia clínica</h2>
+    <div class="content">
+      <h2>Psicoterapia clínica</h2>
 
-    <p>
-      Trabalho com pessoas que funcionam bem externamente, mas que sentem,
-      internamente, a necessidade de compreender melhor o que vivem, sentem
-      e repetem.
-    </p>
+      <p>
+        Trabalho com pessoas que funcionam bem externamente, mas que sentem, internamente,
+        a necessidade de compreender melhor o que vivem, sentem e repetem.
+      </p>
 
-    <p>
-      A psicoterapia é um espaço de escuta qualificada, onde não há respostas
-      prontas nem caminhos padronizados — há presença, reflexão e construção
-      conjunta de sentido.
-    </p>
+      <p>
+        A psicoterapia é um espaço de escuta qualificada, onde não há respostas prontas nem
+        caminhos padronizados — há presença, reflexão e construção conjunta de sentido.
+      </p>
 
-    <p>
-      O processo é indicado para quem deseja:
-    </p>
+      <p>O processo é indicado para quem deseja:</p>
 
-    <ul>
-      <li>compreender padrões emocionais e relacionais</li>
-      <li>organizar pensamentos e decisões</li>
-      <li>lidar com ansiedade, esgotamento ou conflitos internos</li>
-      <li>desenvolver maior clareza e autonomia emocional</li>
-    </ul>
+      <ul>
+        <li>compreender padrões emocionais e relacionais</li>
+        <li>organizar pensamentos e decisões</li>
+        <li>lidar com ansiedade, esgotamento ou conflitos internos</li>
+        <li>desenvolver maior clareza e autonomia emocional</li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<section>
+<section class="band" id="mentoria">
   <div class="container">
-    <h2>Mentoria executiva</h2>
+    <div class="content">
+      <h2>Mentoria executiva</h2>
 
-    <p>
-      A mentoria é voltada a profissionais que ocupam posições de responsabilidade
-      e precisam sustentar decisões complexas, muitas vezes em ambientes de pressão.
-    </p>
+      <p>
+        A mentoria é voltada a profissionais que ocupam posições de responsabilidade e precisam
+        sustentar decisões complexas, muitas vezes em ambientes de pressão.
+      </p>
 
-    <p>
-      O trabalho acontece a partir de uma leitura cuidadosa da sua realidade,
-      integrando aspectos emocionais, comportamentais e estratégicos.
-    </p>
+      <p>
+        O trabalho acontece a partir de uma leitura cuidadosa da sua realidade, integrando aspectos
+        emocionais, comportamentais e estratégicos.
+      </p>
 
-    <p>
-      É indicada para quem:
-    </p>
+      <p>É indicada para quem:</p>
 
-    <ul>
-      <li>ocupa cargos de liderança ou gestão</li>
-      <li>vive momentos de transição ou redefinição profissional</li>
-      <li>busca clareza, coerência e consistência em suas decisões</li>
-      <li>não procura respostas prontas, mas reflexão qualificada</li>
-    </ul>
+      <ul>
+        <li>ocupa cargos de liderança ou gestão</li>
+        <li>vive momentos de transição ou redefinição profissional</li>
+        <li>busca clareza, coerência e consistência em suas decisões</li>
+        <li>não procura respostas prontas, mas reflexão qualificada</li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<section>
+<section class="band band-soft" id="sobre">
   <div class="container">
-    <h2>Sobre</h2>
+    <div class="content">
+      <h2>Sobre</h2>
 
-    <p>
-      Sou psicóloga e atuo há mais de dez anos acompanhando pessoas em processos
-      de transformação pessoal e profissional.
-    </p>
+      <p>
+        Sou psicóloga e atuo há mais de dez anos acompanhando pessoas em processos de transformação
+        pessoal e profissional.
+      </p>
 
-    <p>
-      Minha prática integra escuta clínica, leitura cuidadosa dos contextos
-      e compromisso ético com o desenvolvimento humano.
-    </p>
+      <p>
+        Minha prática integra escuta clínica, leitura cuidadosa dos contextos e compromisso ético com
+        o desenvolvimento humano.
+      </p>
 
-    <p>
-      O espaço que ofereço é estruturado para quem busca clareza, consistência
-      e profundidade — sem fórmulas prontas ou promessas vazias.
-    </p>
+      <p>
+        O espaço que ofereço é estruturado para quem busca clareza, consistência e profundidade —
+        sem fórmulas prontas ou promessas vazias.
+      </p>
+    </div>
   </div>
 </section>
 
-<section>
+<section class="band" id="contato">
   <div class="container">
-    <h2>Contato</h2>
+    <div class="content">
+      <h2>Contato</h2>
 
-    <p>
-      Se fizer sentido para você, estou disponível para conversarmos
-      e avaliar como posso contribuir neste momento.
-    </p>
+      <p>
+        Se fizer sentido para você, estou disponível para conversarmos e avaliar como posso contribuir
+        neste momento.
+      </p>
 
-    <a class="btn" href="https://wa.me/5541996257555" target="_blank">
-      Entrar em contato
-    </a>
+      <a class="btn" href="https://wa.me/5541996257555" target="_blank" rel="noopener">Entrar em contato</a>
+    </div>
   </div>
 </section>
 
 <footer>
-  <p>© Sabrina Trentin • Psicóloga • CRP 08/34629</p>
+  <p>© Sabrina Trentin • Psicóloga • CRP 08/XXXXX</p>
 </footer>
 
-  <!-- WhatsApp flutuante -->
+<!-- WhatsApp flutuante (somente ícone) -->
 <a class="wa-float"
    href="https://wa.me/5541996257555"
    target="_blank"
    rel="noopener"
    aria-label="Falar no WhatsApp">
   <span class="wa-dot" aria-hidden="true">
-    <!-- Ícone WhatsApp (SVG) -->
     <svg width="20" height="20" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
       <path fill="#fff" d="M19.1 17.4c-.2-.1-1.2-.6-1.4-.7-.2-.1-.4-.1-.6.1l-.5.7c-.2.2-.3.2-.5.1-1-.4-1.8-1-2.5-1.7-.6-.7-1.1-1.6-1.3-2-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.3-.5.1-.2.1-.4 0-.6l-.6-1.5c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.4 5 4.6.7.3 1.2.4 1.7.5.7.1 1.3.1 1.8 0 .5-.1 1.2-.5 1.4-1.1.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.4-.3z"/>
       <path fill="#fff" d="M26.9 5.1C24 2.3 20.2.7 16.2.7 8.2.7 1.7 7.2 1.7 15.2c0 2.5.7 5 2 7.2L1.6 31.3l9.1-2.4c2.1 1.2 4.6 1.8 6.9 1.8 8 0 14.5-6.5 14.5-14.5 0-4-1.6-7.8-4.2-10.6zm-10.7 23c-2.2 0-4.3-.6-6.2-1.7l-.4-.2-5.4 1.4 1.4-5.3-.2-.4c-1.2-2-1.9-4.3-1.9-6.7 0-6.9 5.6-12.5 12.5-12.5 3.3 0 6.5 1.3 8.8 3.6 2.4 2.4 3.7 5.5 3.7 8.9 0 6.9-5.6 12.5-12.5 12.5z"/>
     </svg>
-  </span>
-
-  <span class="wa-label">
-    WhatsApp
-    <span class="wa-sub">Mensagem direta</span>
   </span>
 </a>
 
