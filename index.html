@@ -247,9 +247,10 @@ footer{
 
 .brand{
   font-family:'Playfair Display', serif;
-  font-size:18px;
-  letter-spacing:.2px;
+  font-size:22px;
+  letter-spacing:0.6px;
   color: var(--text-main);
+  font-weight:500;
 }
 
 .nav-cta{
@@ -285,42 +286,58 @@ footer{
 
 .content li{ margin:8px 0; }
 
-/* WhatsApp flutuante premium (somente ícone) */
+/* WhatsApp flutuante premium */
 .wa-float{
   position:fixed;
   right:18px;
   bottom:18px;
   z-index:9999;
-  width:56px;
-  height:56px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 14px;
   border-radius:999px;
-  display:grid;
-  place-items:center;
-  background:#ffffff;
+  background:#FAF9F7;
+  color:#2F2A26;
+  box-shadow:0 14px 34px rgba(0,0,0,0.12);
   border:1px solid rgba(122,92,69,0.18);
-  box-shadow:0 16px 40px rgba(0,0,0,0.14);
-  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-}
-
-.wa-float:hover{
-  transform:translateY(-2px);
-  box-shadow:0 20px 48px rgba(0,0,0,0.16);
-  border-color: rgba(122,92,69,0.28);
+  font-weight:600;
+  font-size:14px;
 }
 
 .wa-dot{
-  width:40px;
-  height:40px;
+  width:38px;
+  height:38px;
   border-radius:999px;
   display:grid;
   place-items:center;
   background:#a3563a;
-  box-shadow:0 10px 22px rgba(163,86,58,0.28);
+  color:#fff;
 }
 
-@media (max-width:480px){
-  .wa-float{ right:14px; bottom:14px; }
+.wa-float:hover{
+  transform: translateY(-2px);
+  transition: transform .18s ease, box-shadow .18s ease;
+  box-shadow:0 18px 44px rgba(0,0,0,0.14);
 }
+
+.wa-float:active{
+  transform: translateY(0px);
+}
+
+@media (max-width: 480px){
+  .wa-float{
+    right:14px;
+    bottom:14px;
+    padding:10px 12px;
+    font-size:13px;
+  }
+  .wa-dot{
+    width:36px;
+    height:36px;
+  }
+}
+
 
 
 </style>
@@ -331,10 +348,10 @@ footer{
 
 <header class="site-header" id="top">
   <div class="container header-inner">
-    <a class="brand" href="#top">Sabrina Trentin</a>
-    <a class="nav-cta" href="https://wa.me/5541996257555" target="_blank" rel="noopener">Contato</a>
+    <span class="brand">Sabrina Trentin</span>
   </div>
 </header>
+
 
 <section class="hero">
   <div class="container">
