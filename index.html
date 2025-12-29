@@ -147,20 +147,22 @@ footer{
 /* WhatsApp flutuante */
 .wa-float{
   position:fixed;
-  right:18px;
   bottom:18px;
+  right:18px;
   z-index:9999;
   display:flex;
   align-items:center;
-  gap:10px;
-  padding:12px 14px;
-  border-radius:999px;
-  background:#FAF9F7;
-  color:#2F2A26;
-  box-shadow:0 14px 34px rgba(0,0,0,0.12);
-  border:1px solid rgba(122,92,69,0.18);
-  font-weight:600;
-  font-size:14px;
+  justify-content:center;
+  width:56px;
+  height:56px;
+  background:#a3563a;
+  border-radius:50%;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  transition:transform .2s ease;
+}
+
+.wa-float:hover{
+  transform:scale(1.05);
 }
 
 .wa-dot{
