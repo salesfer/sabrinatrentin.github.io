@@ -1,183 +1,144 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sabrina Trentin – Psicóloga</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- SEO -->
-  <meta name="description" content="Psicóloga. Atendimento online. Agendamento via WhatsApp." />
-  <meta name="robots" content="index,follow" />
-  <link rel="canonical" href="https://sabrinatrentin.com.br/" />
+<title>Sabrina Trentin | Psicóloga</title>
+<meta name="description" content="Psicoterapia online. Um espaço de escuta, clareza e reconstrução emocional." />
 
-  <!-- Open Graph (para link bonito no WhatsApp) -->
-  <meta property="og:title" content="Sabrina Trentin – Psicóloga" />
-  <meta property="og:description" content="Atendimento online. Agende via WhatsApp." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sabrinatrentin.com.br/" />
-  <!-- Opcional: depois coloque uma imagem real -->
-  <!-- <meta property="og:image" content="https://sabrinatrentin.com.br/og.jpg" /> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <meta name="theme-color" content="#ffffff" />
+<style>
+:root {
+  --bg-main: #F3EEE8;
+  --bg-soft: #FAF9F7;
+  --text-main: #2F2A26;
+  --text-soft: #7A5C45;
+  --accent: #6F7B68;
+  --radius: 18px;
+  --max: 1080px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:var(--bg-main);
+  color:var(--text-main);
+  line-height:1.6;
+}
+h1,h2{font-family:'Playfair Display',serif}
+a{text-decoration:none;color:inherit}
+section{padding:80px 20px}
+.container{max-width:var(--max);margin:auto}
 
-  <style>
-    :root{
-      --bg:#ffffff; --ink:#0f172a; --muted:#475569; --line:#e5e7eb; --soft:#f8fafc;
-      --gold:#b08d57;
-      --shadow: 0 12px 30px rgba(2,6,23,.06);
-      --r:18px; --max:1040px;
-      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.5}
-    a{color:inherit;text-decoration:none}
-    header{
-      position:sticky;top:0;z-index:10;
-      background:rgba(255,255,255,.86);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid var(--line)
-    }
-    nav{
-      max-width:var(--max);margin:0 auto;padding:14px 18px;
-      display:flex;align-items:center;justify-content:space-between;gap:12px
-    }
-    .brand{display:flex;align-items:center;gap:10px;font-weight:900}
-    .mark{
-      width:26px;height:26px;border-radius:10px;
-      background:linear-gradient(135deg, rgba(15,23,42,.95), rgba(176,141,87,.55));
-      box-shadow:var(--shadow)
-    }
-    .links{display:flex;gap:16px;flex-wrap:wrap}
-    .links a{font-size:14px;font-weight:800;color:var(--muted)}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:12px 16px;border-radius:999px;border:1px solid var(--line);
-      background:#fff;box-shadow:var(--shadow);
-      font-weight:900;font-size:14px;white-space:nowrap
-    }
-    .btn.primary{
-      border-color:rgba(176,141,87,.45);
-      background:linear-gradient(180deg, rgba(176,141,87,.14), rgba(176,141,87,.06))
-    }
-    main{max-width:var(--max);margin:0 auto;padding:34px 18px 80px}
-    .hero{display:grid;grid-template-columns:1.2fr .9fr;gap:20px;align-items:start}
-    @media (max-width:900px){
-      nav{flex-direction:column;align-items:flex-start}
-      .hero{grid-template-columns:1fr}
-    }
-    .kicker{display:flex;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:13px;font-weight:800}
-    .tag{padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:var(--soft)}
-    .tag.gold{border-color:rgba(176,141,87,.45);background:rgba(176,141,87,.10);color:#6b4f2b}
-    h1{margin:14px 0 10px;font-size:44px;line-height:1.08;letter-spacing:-.6px}
-    @media (max-width:520px){h1{font-size:36px}}
-    .lead{margin:0;color:var(--muted);font-size:16px;max-width:60ch}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
-    .card{border:1px solid var(--line);background:#fff;border-radius:var(--r);box-shadow:var(--shadow);padding:18px}
-    .photo{
-      width:100%;aspect-ratio:4/3;border-radius:var(--r);border:1px solid var(--line);
-      background:
-        radial-gradient(500px 250px at 30% 20%, rgba(176,141,87,.12), transparent 60%),
-        radial-gradient(420px 220px at 80% 30%, rgba(15,23,42,.06), transparent 60%),
-        var(--soft);
-      display:grid;place-items:center;color:#64748b;font-weight:900;text-align:center;padding:14px
-    }
-    section{margin-top:34px}
-    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    @media (max-width:900px){.grid3{grid-template-columns:1fr}}
-    .t{font-weight:900;margin:0 0 6px}
-    .p{margin:0;color:var(--muted)}
-    footer{border-top:1px solid var(--line);background:#fff}
-    footer .wrap{
-      max-width:var(--max);margin:0 auto;padding:22px 18px;
-      display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
-      color:var(--muted);font-size:13px
-    }
-    .note{font-size:12px;color:#64748b;margin-top:14px}
-  </style>
+.hero{
+  padding-top:90px;
+}
+.hero h1{
+  font-size:42px;
+  max-width:680px;
+}
+.hero p{
+  max-width:520px;
+  font-size:18px;
+  color:var(--text-soft);
+}
+.btn{
+  display:inline-block;
+  margin-top:24px;
+  padding:14px 28px;
+  border-radius:40px;
+  background:var(--accent);
+  color:#fff;
+  font-weight:500;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+.card{
+  background:var(--bg-soft);
+  padding:26px;
+  border-radius:var(--radius);
+}
+.card h3{
+  margin-top:0;
+}
+footer{
+  background:#7A5C45;
+  color:#fff;
+  text-align:center;
+  padding:40px 20px;
+  font-size:14px;
+}
+</style>
 </head>
 
 <body>
-<header>
-  <nav>
-    <div class="brand">
-      <span class="mark" aria-hidden="true"></span>
-      <div>
-        <div>Sabrina Trentin – Psicóloga</div>
-        <div style="font-size:12px;color:var(--muted);font-weight:800;margin-top:2px;">Atendimento online</div>
+
+<section class="hero">
+  <div class="container">
+    <h1>Um espaço para compreender, reorganizar e seguir com mais clareza.</h1>
+    <p>Psicoterapia online para quem busca escuta, acolhimento e direção emocional.</p>
+    <a class="btn" href="https://wa.me/5541996257555" target="_blank">Agendar conversa</a>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="grid">
+      <div class="card">
+        <h3>Ansiedade e sobrecarga</h3>
+        <p>Quando o excesso de pensamentos e exigências internas se tornam difíceis de sustentar.</p>
+      </div>
+      <div class="card">
+        <h3>Relações e limites</h3>
+        <p>Dificuldade em se posicionar, conflitos recorrentes ou sensação de esgotamento emocional.</p>
+      </div>
+      <div class="card">
+        <h3>Transições de vida</h3>
+        <p>Momentos de mudança, redefinições e busca por sentido.</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="links">
-      <a href="#para-quem">Para quem</a>
-      <a href="#como">Como funciona</a>
-      <a href="#contato">Contato</a>
-    </div>
-
-    <a class="btn primary" href="#contato">Agendar</a>
-  </nav>
-</header>
-
-<main>
-  <section class="hero">
-    <div>
-      <div class="kicker">
-        <span class="tag gold">Online</span>
-        <span class="tag">Psicoterapia</span>
-        <span class="tag">Sigilo</span>
+<section>
+  <div class="container">
+    <div class="grid">
+      <div class="card">
+        <h3>Como funciona</h3>
+        <p>Atendimento online, em um espaço seguro, sigiloso e respeitoso, voltado ao autoconhecimento e à construção de recursos internos.</p>
       </div>
-
-      <h1>Um espaço para organizar mente e emoções.</h1>
-
-      <p class="lead">Atendimento objetivo e acolhedor para quem busca clareza, equilíbrio e direção.</p>
-
-      <div class="cta">
-        <!-- TROQUE SEUNUMERO (ex.: 5541999999999) -->
-        <a class="btn primary" href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn" href="https://www.instagram.com/sabrinatrentin.psi/" target="_blank" rel="noopener">Instagram</a>
+      <div class="card">
+        <h3>Frequência</h3>
+        <p>Sessões semanais ou conforme necessidade, sempre alinhadas ao seu momento.</p>
       </div>
-
-      <div class="note">Em situação de urgência/emergência, procure atendimento imediato.</div>
-    </div>
-
-    <aside class="card">
-      <div class="photo">FOTO PROFISSIONAL<br/><span style="font-size:12px;font-weight:800;">(substituir)</span></div>
-    </aside>
-  </section>
-
-  <section id="para-quem">
-    <div class="grid3">
-      <div class="card"><p class="t">Ansiedade e sobrecarga</p><p class="p">Quando a mente não desacelera.</p></div>
-      <div class="card"><p class="t">Relacionamentos e limites</p><p class="p">Conflitos, comunicação, escolhas.</p></div>
-      <div class="card"><p class="t">Transições de vida</p><p class="p">Mudanças, decisões, recomeços.</p></div>
-    </div>
-  </section>
-
-  <section id="como">
-    <div class="grid3">
-      <div class="card"><p class="t">1. Primeiro encontro</p><p class="p">Entendemos a demanda e o caminho.</p></div>
-      <div class="card"><p class="t">2. Processo</p><p class="p">Consistência e acompanhamento.</p></div>
-      <div class="card"><p class="t">3. Ajustes</p><p class="p">Revisões para sustentar mudanças.</p></div>
-    </div>
-  </section>
-
-  <section id="contato">
-    <div class="card" style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;">
-      <div>
-        <div style="font-weight:900;">Agendamento</div>
-        <div style="color:var(--muted);font-weight:800;font-size:13px;margin-top:4px;">Me chame no WhatsApp com sua disponibilidade.</div>
+      <div class="card">
+        <h3>Processo terapêutico</h3>
+        <p>Um percurso construído juntos, com escuta qualificada e acompanhamento contínuo.</p>
       </div>
-      <a class="btn primary" href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener">WhatsApp</a>
     </div>
-  </section>
-</main>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="card">
+      <h3>Agendamentos</h3>
+      <p>Entre em contato pelo WhatsApp para verificar disponibilidade e valores.</p>
+      <a class="btn" href="https://wa.me/5541996257555">Falar pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
 
 <footer>
-  <div class="wrap">
-    <div>© <span id="y"></span> Sabrina Trentin – Psicóloga</div>
-    <div>LGPD • Política de Privacidade</div>
-  </div>
+  <p>© Sabrina Trentin • Psicóloga • CRP 08/XXXXX</p>
 </footer>
 
-<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>
