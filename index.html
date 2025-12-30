@@ -1,461 +1,272 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Sabrina Trentin | Psicóloga</title>
-  <meta name="description" content="Psicoterapia online e mentoria executiva. Um espaço de escuta qualificada, nitidez e maturidade emocional." />
+<title>Sabrina Trentin | Psicóloga</title>
+<meta name="description" content="Psicoterapia online e mentoria executiva. Um espaço de escuta qualificada, nitidez e maturidade emocional." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-  <style>
-    :root{
-      --bg-main:#F3EEE8;
-      --bg-soft:#FAF9F7;
-      --text-main:#2F2A26;
-      --text-soft:#7A5C45;
-      --radius:18px;
-      --max:1080px;
+<style>
+:root{
+  --bg-main:#F3EEE8;
+  --bg-soft:#FAF9F7;
+  --text-main:#2F2A26;
+  --text-soft:#7A5C45;
+  --radius:18px;
+  --max:1080px;
+  --cta:#a3563a;
+  --cta-hover:#8f4a33;
+}
 
-      --cta:#a3563a;
-      --cta-hover:#8f4a33;
-      --olive:#6F7B68;
-    }
+*{box-sizing:border-box}
 
-    *{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  background:var(--bg-main);
+  color:var(--text-main);
+  line-height:1.6;
+}
 
-    body{
-      margin:0;
-      font-family:'Inter',sans-serif;
-      background:var(--bg-main);
-      color:var(--text-main);
-      line-height:1.6;
-    }
+h1,h2,h3{
+  font-family:'Playfair Display',serif;
+  font-weight:500;
+}
 
-    h1,h2,h3{
-      font-family:'Playfair Display',serif;
-      font-weight:500;
-    }
+a{color:inherit;text-decoration:none}
 
-    a{color:inherit;text-decoration:none}
+section{padding:80px 20px}
 
-    section{padding:80px 20px}
+.container{max-width:var(--max);margin:0 auto}
 
-    .container{max-width:var(--max);margin:0 auto}
+/* HEADER */
+.site-header{
+  position:sticky;
+  top:0;
+  background:rgba(243,238,232,.85);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(122,92,69,.14);
+  z-index:10;
+}
 
-    /* Header minimalista (apenas nome) */
-    .site-header{
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(243,238,232,0.78);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(122,92,69,0.14);
-    }
+.header-inner{
+  padding:18px 0;
+}
 
-    .header-inner{
-      display:flex;
-      align-items:center;
-      justify-content:flex-start;
-      padding:18px 0;
-    }
+.brand{
+  font-family:'Playfair Display',serif;
+  font-size:28px;
+  letter-spacing:.8px;
+}
 
-    .brand{
-      font-family:'Playfair Display', serif;
-      font-size:28px;
-      letter-spacing:0.8px;
-      color: var(--text-main);
-      font-weight:500;
-    }
+/* HERO */
+.hero{
+  padding-top:70px;
+}
 
-    /* HERO */
-    .hero{
-      padding-top:70px;
-    }
+.hero .container{
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:32px;
+  align-items:center;
+}
 
-    .hero .container{
-      display:grid;
-      grid-template-columns:1.1fr 0.9fr;
-      gap:32px;
-      align-items:center;
-    }
+.hero h1{
+  font-size:42px;
+  line-height:1.15;
+  margin-bottom:14px;
+}
 
-    .hero h1{
-      font-size:42px;
-      line-height:1.15;
-      letter-spacing:-0.02em;
-      font-weight:500;
-      margin:0 0 14px 0;
-      text-align:left;
-    }
+.hero p{
+  max-width:560px;
+  color:var(--text-soft);
+  margin-bottom:14px;
+}
 
-    .hero p{
-      max-width:560px;
-      font-size:18px;
-      line-height:1.6;
-      color:var(--text-soft);
-      margin:10px 0 0 0;
-    }
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  border-radius:40px;
+  background:var(--cta);
+  color:#fff;
+  font-weight:500;
+  transition:.2s;
+}
 
-    .btn{
-      display:inline-block;
-      margin-top:24px;
-      padding:14px 28px;
-      border-radius:40px;
-      background:var(--cta);
-      color:#fff;
-      font-weight:500;
-      transition:transform .15s ease, background .2s ease, opacity .2s ease;
-    }
+.btn:hover{
+  background:var(--cta-hover);
+}
 
-    .btn:hover{
-      background:var(--cta-hover);
-      opacity:.96;
-      transform: translateY(-1px);
-    }
+.hero img{
+  width:100%;
+  max-height:720px;
+  object-fit:contain;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
 
-    .hero img{
-      width:100%;
-      height:auto;
-      max-height:720px;
-      display:block;
-      border-radius:var(--radius);
-      object-fit:contain;
-      object-position:center;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    }
+/* SECTIONS */
+.band{padding:72px 20px;border-top:1px solid rgba(122,92,69,.1);}
+.band-soft{background:var(--bg-soft);}
+.content{max-width:760px;margin:0 auto;}
+.content h2{margin-bottom:14px;}
+.content p{margin:14px 0;}
+.content ul{padding-left:18px;}
+.content li{margin:8px 0;}
 
-    /* Seções com demarcação minimalista */
-    .band{
-      padding:72px 20px;
-      border-top: 1px solid rgba(122,92,69,0.10);
-    }
+/* SOBRE */
+.sobre-grid{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:48px;
+  align-items:center;
+}
 
-    .band-soft{
-      background: var(--bg-soft);
-    }
+.sobre-img img{
+  width:100%;
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
 
-    .content{
-      max-width:760px;
-      margin:0 auto;
-    }
+/* MOBILE */
+@media(max-width:900px){
+  .hero .container,
+  .sobre-grid{
+    grid-template-columns:1fr;
+  }
 
-    .content h2{
-      margin:0 0 14px 0;
-      text-align:center;
-    }
+  .hero img{
+    max-height:520px;
+  }
+}
 
-    .content p{ margin:14px 0; }
+/* FOOTER */
+footer{
+  background:#7A5C45;
+  color:#fff;
+  text-align:center;
+  padding:40px 20px;
+}
 
-    .content ul{
-      margin: 14px 0 0 18px;
-      padding:0;
-    }
-
-    .content li{ margin:8px 0; }
-
-    /* Rodapé */
-    footer{
-      background:#7A5C45;
-      color:#fff;
-      text-align:center;
-      padding:40px 20px;
-      font-size:14px;
-    }
-
-    /* WhatsApp flutuante (premium) */
-    .wa-float{
-      position:fixed;
-      right:18px;
-      bottom:18px;
-      z-index:9999;
-
-      display:flex;
-      align-items:center;
-      gap:10px;
-
-      padding:12px 14px 12px 12px;
-      border-radius:999px;
-
-      background:#ffffff;
-      color:var(--text-main);
-
-      border:1px solid rgba(122,92,69,0.18);
-      box-shadow:0 16px 40px rgba(0,0,0,0.14);
-
-      font-weight:600;
-      font-size:14px;
-      letter-spacing:0.2px;
-
-      transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-    }
-
-    .wa-float:hover{
-      transform:translateY(-2px);
-      box-shadow:0 20px 48px rgba(0,0,0,0.16);
-      border-color: rgba(122,92,69,0.28);
-    }
-
-    .wa-dot{
-      width:40px;
-      height:40px;
-      border-radius:999px;
-      display:grid;
-      place-items:center;
-      background:var(--cta);
-      box-shadow:0 10px 22px rgba(163,86,58,0.28);
-      flex:0 0 auto;
-    }
-
-    .wa-label{
-      line-height:1;
-      white-space:nowrap;
-    }
-
-    /* Seção Sobre com imagem + texto agrupado */
-    .sobre-grid{
-      display:grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap:48px;
-      align-items:center;
-    }
-
-    .sobre-img img{
-      width:100%;
-      height:auto;
-      border-radius:18px;
-      box-shadow:0 12px 30px rgba(0,0,0,0.12);
-      display:block;
-    }
-
-    .sobre-texto h2{
-      margin:0 0 14px 0;
-      text-align:left;
-    }
-
-    .sobre-texto p{
-      margin:14px 0;
-      color:var(--text-soft);
-    }
-
-    /* Mobile */
-    @media (max-width:900px){
-      .hero .container{ grid-template-columns:1fr; }
-
-      .hero img{
-        max-height:620px;
-        border-radius:16px;
-        margin-top:20px;
-      }
-
-      .sobre-grid{
-        grid-template-columns:1fr;
-      }
-
-      .sobre-texto h2{
-        text-align:left;
-      }
-    }
-
-    @media (max-width:480px){
-      .wa-float{
-        right:14px;
-        bottom:14px;
-        padding:12px;
-      }
-      .wa-label{ display:none; }
-      .wa-dot{ width:46px; height:46px; }
-    }
-  </style>
+/* WhatsApp */
+.wa-float{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  background:#fff;
+  border-radius:999px;
+  padding:12px;
+  box-shadow:0 14px 36px rgba(0,0,0,.2);
+}
+.wa-dot{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:#a3563a;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+</style>
 </head>
 
 <body>
 
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <span class="brand">Sabrina Trentin</span>
+<header class="site-header">
+  <div class="container header-inner">
+    <span class="brand">Sabrina Trentin</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div>
+      <h1>Psicóloga clínica | apoio em momentos de reorganização e escolha</h1>
+
+      <p>Para quem sustenta decisões, pessoas e resultados — e não quer mais se afastar de si no processo.</p>
+
+      <p>Trabalho com pessoas que funcionam bem para o mundo, mas que sentem que algo internamente pede atenção, reorganização ou decisão.</p>
+
+      <p>Atendo em dois formatos distintos, que partem do mesmo fundamento: consciência, maturidade emocional e coerência interna.</p>
+
+      <p><strong>Psicoterapia clínica</strong></p>
+      <p><strong>Mentoria executiva</strong></p>
+
+      <a class="btn" href="https://wa.me/5541996257555" target="_blank">Entrar em contato</a>
     </div>
-  </header>
 
-  <section class="hero">
-    <div class="container">
-      <div>
-        <h1>Psicóloga clínica | apoio em momentos de reorganização e escolha</h1>
+    <div>
+      <img src="foto-sabrina1.jpg" alt="Sabrina Trentin - Psicóloga">
+    </div>
+  </div>
+</section>
 
-        <p>Para quem sustenta decisões, pessoas e resultados — e não quer mais se afastar de si no processo.</p>
+<section class="band band-soft">
+  <div class="container">
+    <div class="content">
+      <h2>Psicoterapia clínica | Um espaço de escuta e elaboração emocional</h2>
 
-        <p>
-          Trabalho com pessoas que funcionam bem para o mundo, mas que sentem que algo internamente pede atenção,
-          reorganização ou decisão. Aqui não há fórmulas prontas, personagens ou promessas vazias. Há presença,
-          escuta qualificada e trabalho sério com o que está vivo no aqui e agora.
-        </p>
+      <p>Existem muitas formas de conduzir um processo terapêutico. Esta é a minha.</p>
 
-        <p>
-          Atendo em dois formatos distintos, que partem do mesmo fundamento: consciência, maturidade emocional e coerência interna.
-        </p>
+      <p>Ao longo dos anos desenvolvi um modo de estar na clínica que une presença, escuta atenta e compromisso real com o que você vive.</p>
 
-        <p><strong>Psicoterapia clínica</strong></p>
-        <p><strong>Mentoria executiva</strong></p>
+      <p>Meu trabalho é ajudar você a compreender seus movimentos internos, emoções e decisões.</p>
 
-        <a class="btn" href="https://wa.me/5541996257555" target="_blank" rel="noopener">Entrar em contato</a>
+      <p>Isso acontece com cuidado, profundidade e respeito ao seu tempo.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="container">
+    <div class="content">
+      <h2>Mentoria executiva</h2>
+
+      <p>A mentoria é voltada a quem precisa sustentar decisões importantes, atravessar mudanças e lidar com responsabilidades complexas.</p>
+
+      <p>É um espaço de clareza, reflexão e organização interna.</p>
+
+      <p>Não é sobre motivação. É sobre consciência.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band band-soft">
+  <div class="container">
+    <div class="sobre-grid">
+      <div class="sobre-img">
+        <img src="foto-sabrina1.jpg" alt="Sabrina Trentin">
       </div>
 
-      <div>
-        <img src="foto-sabrina1.jpg" alt="Sabrina Trentin - Psicóloga">
+      <div class="sobre-texto">
+        <h2>Um pouco sobre mim</h2>
+
+        <p>Sou psicóloga e atuo há mais de dez anos acompanhando pessoas em processos de transformação pessoal e profissional.</p>
+
+        <p>Ao longo desse percurso, construí uma escuta clínica cuidadosa, ética e profundamente humana.</p>
+
+        <p>Meu trabalho é ajudar você a compreender o que está vivendo, para que possa se posicionar com mais clareza e autonomia.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="band band-soft" id="clinica">
-    <div class="container">
-      <div class="content">
-        <h2>Psicoterapia clínica | Um espaço de escuta e elaboração emocional</h2>
+<footer>
+  <p>© Sabrina Trentin • Psicóloga • CRP 08/34629</p>
+</footer>
 
-        <p>Existem muitas formas de conduzir um processo terapêutico. Esta é a minha.</p>
-
-        <p>
-          Ao longo dos últimos anos, desenvolvi um jeito de estar na clínica que une presença, escuta atenta e compromisso real
-          com o que você vive no aqui e agora. Nada pronto ou decorado — apenas o encontro entre a sua experiência e um espaço seguro
-          para que ela possa ser explorada com honestidade.
-        </p>
-
-        <p>Meu trabalho é ajudar você a:</p>
-
-        <ul>
-          <li>organizar o que sente</li>
-          <li>compreender suas reações</li>
-          <li>identificar padrões que se repetem</li>
-          <li>construir decisões mais alinhadas com quem você é hoje</li>
-        </ul>
-
-        <p>Tudo isso com cuidado, profundidade e, principalmente, no seu ritmo.</p>
-
-        <p>
-          Terapia não é sobre se tornar outra pessoa. É sobre reconhecer partes de si que ficaram silenciadas,
-          ampliar consciência sobre seus movimentos internos e encontrar caminhos mais coerentes para seguir.
-        </p>
-
-        <p>Se essa forma de conduzir ressoar em você, este espaço existe para isso.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="band" id="mentoria">
-    <div class="container">
-      <div class="content">
-        <h2>Mentoria executiva | Organização interna para decisões importantes</h2>
-
-        <p>
-          A mentoria executiva é um espaço de reflexão estratégica e aprofundamento psicológico voltado a profissionais
-          que ocupam posições de responsabilidade, influência ou transição crítica de carreira.
-        </p>
-
-        <p>Trabalho com líderes e executivos que precisam:</p>
-
-        <ul>
-          <li>sustentar decisões complexas sem terceirizar responsabilidade</li>
-          <li>ampliar clareza interna para escolhas profissionais e pessoais</li>
-          <li>revisar padrões de liderança, poder e comunicação</li>
-          <li>atravessar transições sem perder identidade</li>
-        </ul>
-
-        <p>
-          Este não é um espaço de motivação ou performance artificial.
-          É um trabalho voltado a pensar melhor, decidir melhor e sustentar o impacto dessas decisões.
-        </p>
-
-        <p>Os encontros integram:</p>
-
-        <ul>
-          <li>leitura psicológica dos impasses e comportamentos</li>
-          <li>análise do contexto organizacional e relacional</li>
-          <li>questionamento direto de aspectos não percebidos, repetições e autoenganos</li>
-        </ul>
-
-        <p>
-          Não ofereço respostas prontas. Ofereço pensamento crítico, escuta qualificada e confrontação responsável.
-        </p>
-
-        <p>A mentoria é indicada para quem:</p>
-
-        <ul>
-          <li>já chegou longe, mas percebe que o custo interno está alto</li>
-          <li>ocupa cargos de liderança, gestão ou influência técnica</li>
-          <li>não busca validação, mas lucidez</li>
-          <li>entende que amadurecimento profissional exige trabalho interno</li>
-        </ul>
-
-        <p>Se você espera alguém que te diga exatamente o que fazer, este não é o trabalho.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="band band-soft" id="sobre">
-    <div class="container">
-      <div class="sobre-grid">
-        <div class="sobre-img">
-          <img src="foto-sabrina2.jpg" alt="Sabrina Trentin - Psicóloga">
-        </div>
-
-        <div class="sobre-texto">
-          <h2>Um pouco sobre mim e sobre o cuidado que ofereço</h2>
-
-          <p>
-            Sou psicóloga há mais de 10 anos e, nesse tempo, acompanhei muitas pessoas tentando se equilibrar
-            enquanto lidavam com as exigências da vida adulta.
-          </p>
-
-          <p>
-            Conciliei a clínica com minha vivência profissional fora dela, o que me permitiu reconhecer nuances emocionais
-            que nem sempre aparecem de imediato — e isso sustenta a forma como trabalho hoje, tanto na psicoterapia quanto na mentoria executiva.
-          </p>
-
-          <p>
-            Na clínica, meu papel é ajudar você a compreender o que sente e o que precisa agora, para que sua vida fique mais compatível com você.
-          </p>
-
-          <p>
-            Na mentoria, é oferecer clareza, leitura psicológica e pensamento crítico para decisões que impactam pessoas, estruturas e trajetórias.
-          </p>
-
-          <p>
-            O espaço que construo diariamente é seguro, humano e tecnicamente preparado para acompanhar o que está pedindo atenção em você.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="band" id="contato">
-    <div class="container">
-      <div class="content">
-        <h2>Contato</h2>
-
-        <p>
-          Se você sente que este pode ser um momento importante para olhar com mais cuidado para o que está vivendo, podemos conversar.
-        </p>
-
-        <a class="btn" href="https://wa.me/5541996257555" target="_blank" rel="noopener">Entrar em contato</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© Sabrina Trentin • Psicóloga • CRP 08/34629</p>
-  </footer>
-
-  <a class="wa-float" href="https://wa.me/5541996257555" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
-    <span class="wa-dot" aria-hidden="true">
-      <svg width="20" height="20" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-        <path fill="#fff" d="M19.1 17.4c-.2-.1-1.2-.6-1.4-.7-.2-.1-.4-.1-.6.1l-.5.7c-.2.2-.3.2-.5.1-1-.4-1.8-1-2.5-1.7-.6-.7-1.1-1.6-1.3-2-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.3-.5.1-.2.1-.4 0-.6l-.6-1.5c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.4 5 4.6.7.3 1.2.4 1.7.5.7.1 1.3.1 1.8 0 .5-.1 1.2-.5 1.4-1.1.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.4-.3z"/>
-        <path fill="#fff" d="M26.9 5.1C24 2.3 20.2.7 16.2.7 8.2.7 1.7 7.2 1.7 15.2c0 2.5.7 5 2 7.2L1.6 31.3l9.1-2.4c2.1 1.2 4.6 1.8 6.9 1.8 8 0 14.5-6.5 14.5-14.5 0-4-1.6-7.8-4.2-10.6zm-10.7 23c-2.2 0-4.3-.6-6.2-1.7l-.4-.2-5.4 1.4 1.4-5.3-.2-.4c-1.2-2-1.9-4.3-1.9-6.7 0-6.9 5.6-12.5 12.5-12.5 3.3 0 6.5 1.3 8.8 3.6 2.4 2.4 3.7 5.5 3.7 8.9 0 6.9-5.6 12.5-12.5 12.5z"/>
-      </svg>
-    </span>
-    <span class="wa-label">WhatsApp</span>
-  </a>
+<a class="wa-float" href="https://wa.me/5541996257555" target="_blank" aria-label="WhatsApp">
+  <div class="wa-dot">
+    <svg width="20" height="20" viewBox="0 0 32 32" fill="#fff">
+      <path d="M19.1 17.4c-.2-.1-1.2-.6-1.4-.7-.2-.1-.4-.1-.6.1l-.5.7c-.2.2-.3.2-.5.1-1-.4-1.8-1-2.5-1.7-.6-.7-1.1-1.6-1.3-2-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.3-.5.1-.2.1-.4 0-.6l-.6-1.5c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.4 5 4.6.7.3 1.2.4 1.7.5.7.1 1.3.1 1.8 0 .5-.1 1.2-.5 1.4-1.1.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.4-.3z"/>
+    </svg>
+  </div>
+</a>
 
 </body>
 </html>
