@@ -281,6 +281,42 @@
     object-fit:cover;
   }
 }
+/* Seção SOBRE - layout equilibrado */
+.sobre-grid{
+  display:grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap:48px;
+  align-items:center;
+}
+
+.sobre-img img{
+  width:100%;
+  height:auto;
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.12);
+}
+
+.sobre-texto{
+  max-width:520px;
+}
+
+.sobre-texto h2{
+  margin-top:0;
+}
+
+@media (max-width: 900px){
+  .sobre-grid{
+    grid-template-columns:1fr;
+  }
+
+  .sobre-img{
+    order:-1;
+  }
+
+  .sobre-texto{
+    max-width:100%;
+  }
+}
 
   </style>
 </head>
