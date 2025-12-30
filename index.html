@@ -84,21 +84,21 @@
     }
 
     .hero h1{
-  font-size: 42px;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  font-weight: 500;
-  margin-bottom: 14px;
-  text-align: left;
-}
+      font-size:42px;
+      line-height:1.15;
+      letter-spacing:-0.02em;
+      font-weight:500;
+      margin:0 0 14px 0;
+      text-align:left;
+    }
 
     .hero p{
-  max-width: 560px;
-  font-size: 18px;
-  line-height: 1.6;
-  color: var(--text-soft);
-  margin-top: 6px;
-}
+      max-width:560px;
+      font-size:18px;
+      line-height:1.6;
+      color:var(--text-soft);
+      margin:10px 0 0 0;
+    }
 
     .btn{
       display:inline-block;
@@ -118,14 +118,14 @@
     }
 
     .hero img{
-  width:100%;
-  height:auto;
-  max-height:720px;
-  display:block;
-  border-radius:var(--radius);
-  object-fit:contain;
-  object-position:center;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      width:100%;
+      height:auto;
+      max-height:720px;
+      display:block;
+      border-radius:var(--radius);
+      object-fit:contain;
+      object-position:center;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
     }
 
     /* Seções com demarcação minimalista */
@@ -140,10 +140,12 @@
 
     .content{
       max-width:760px;
+      margin:0 auto;
     }
 
     .content h2{
       margin:0 0 14px 0;
+      text-align:center;
     }
 
     .content p{ margin:14px 0; }
@@ -164,7 +166,7 @@
       font-size:14px;
     }
 
-    /* WhatsApp flutuante (premium, como antes) */
+    /* WhatsApp flutuante (premium) */
     .wa-float{
       position:fixed;
       right:18px;
@@ -213,18 +215,51 @@
       white-space:nowrap;
     }
 
+    /* Seção Sobre com imagem + texto agrupado */
+    .sobre-grid{
+      display:grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap:48px;
+      align-items:center;
+    }
+
+    .sobre-img img{
+      width:100%;
+      height:auto;
+      border-radius:18px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.12);
+      display:block;
+    }
+
+    .sobre-texto h2{
+      margin:0 0 14px 0;
+      text-align:left;
+    }
+
+    .sobre-texto p{
+      margin:14px 0;
+      color:var(--text-soft);
+    }
+
     /* Mobile */
     @media (max-width:900px){
       .hero .container{ grid-template-columns:1fr; }
 
       .hero img{
-        height:620px;
+        max-height:620px;
         border-radius:16px;
         margin-top:20px;
       }
+
+      .sobre-grid{
+        grid-template-columns:1fr;
+      }
+
+      .sobre-texto h2{
+        text-align:left;
+      }
     }
 
-    /* No celular: fica só o ícone, bem clean */
     @media (max-width:480px){
       .wa-float{
         right:14px;
@@ -234,90 +269,6 @@
       .wa-label{ display:none; }
       .wa-dot{ width:46px; height:46px; }
     }
-    h1, h2 {
-  text-align: center;
-}
-/* Ajuste fino do título no mobile */
-@media (max-width: 600px) {
-  h1 {
-    line-height: 1.15;
-    margin-bottom: 16px;
-  }
-}
-/* Ajuste fino apenas do título principal */
-.hero h1{
-  text-align: left;
-  line-height: 1.15;
-  margin-bottom: 14px;
-}
-
-    /* Seção Sobre com imagem */
-.sobre-grid{
-  display:grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap:48px;
-  align-items:center;
-}
-
-.sobre-img img{
-  width:100%;
-  height:auto;
-  border-radius:18px;
-  box-shadow:0 12px 30px rgba(0,0,0,0.12);
-}
-
-/* Responsivo */
-@media (max-width: 900px){
-  .sobre-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .sobre-img{
-    order:-1;
-  }
-
-  .sobre-img img{
-    max-height:420px;
-    object-fit:cover;
-  }
-}
-/* Seção SOBRE - layout equilibrado */
-.sobre-grid{
-  display:grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap:48px;
-  align-items:center;
-}
-
-.sobre-img img{
-  width:100%;
-  height:auto;
-  border-radius:18px;
-  box-shadow:0 12px 30px rgba(0,0,0,0.12);
-}
-
-.sobre-texto{
-  max-width:520px;
-}
-
-.sobre-texto h2{
-  margin-top:0;
-}
-
-@media (max-width: 900px){
-  .sobre-grid{
-    grid-template-columns:1fr;
-  }
-
-  .sobre-img{
-    order:-1;
-  }
-
-  .sobre-texto{
-    max-width:100%;
-  }
-}
-
   </style>
 </head>
 
@@ -333,27 +284,22 @@
     <div class="container">
       <div>
         <h1>Psicóloga clínica | apoio em momentos de reorganização e escolha</h1>
+
+        <p>Para quem sustenta decisões, pessoas e resultados — e não quer mais se afastar de si no processo.</p>
+
         <p>
-          Para quem sustenta decisões, pessoas e resultados — e não quer mais se afastar de si no processo.
+          Trabalho com pessoas que funcionam bem para o mundo, mas que sentem que algo internamente pede atenção,
+          reorganização ou decisão. Aqui não há fórmulas prontas, personagens ou promessas vazias. Há presença,
+          escuta qualificada e trabalho sério com o que está vivo no aqui e agora.
         </p>
 
         <p>
-          Trabalho com pessoas que funcionam bem para o mundo, mas que sentem que algo internamente pede atenção, 
-          reorganização ou decisão.
-          Aqui não há fórmulas prontas, personagens ou promessas vazias. Há presença, escuta qualificada e trabalho sério 
-          com o que está vivo no aqui e agora.
+          Atendo em dois formatos distintos, que partem do mesmo fundamento: consciência, maturidade emocional e coerência interna.
         </p>
 
-        <p>
-          Atendo em dois formatos distintos, que partem do mesmo fundamento: consciência, maturidade emocional e 
-          coerência interna.
-        </p>
-          <p>
-          Psicoterapia Clínica
-          </p>
-        <p>
-          Mentoria Executiva
-        </p>
+        <p><strong>Psicoterapia clínica</strong></p>
+        <p><strong>Mentoria executiva</strong></p>
+
         <a class="btn" href="https://wa.me/5541996257555" target="_blank" rel="noopener">Entrar em contato</a>
       </div>
 
@@ -368,16 +314,12 @@
       <div class="content">
         <h2>Psicoterapia clínica | Um espaço de escuta e elaboração emocional</h2>
 
-        <p>
-          Existem muitas formas de conduzir um processo terapêutico.
-          Esta é a minha.
-        </p>
+        <p>Existem muitas formas de conduzir um processo terapêutico. Esta é a minha.</p>
 
         <p>
-          Ao longo dos últimos anos, desenvolvi um jeito de estar na clínica que une presença, escuta atenta e 
-          compromisso real com o que você vive no aqui e agora.
-           Nada pronto ou decorado — apenas o encontro entre a sua experiência e um espaço seguro para que ela 
-          possa ser explorada com honestidade.
+          Ao longo dos últimos anos, desenvolvi um jeito de estar na clínica que une presença, escuta atenta e compromisso real
+          com o que você vive no aqui e agora. Nada pronto ou decorado — apenas o encontro entre a sua experiência e um espaço seguro
+          para que ela possa ser explorada com honestidade.
         </p>
 
         <p>Meu trabalho é ajudar você a:</p>
@@ -389,20 +331,14 @@
           <li>construir decisões mais alinhadas com quem você é hoje</li>
         </ul>
 
-        <p>
-          Tudo isso com cuidado, profundidade e, principalmente, no seu ritmo.
-        </p>
-        
-        <p>
-          Terapia não é sobre se tornar outra pessoa.
-É sobre reconhecer partes de si que ficaram silenciadas, ampliar consciência sobre seus movimentos internos e 
-          encontrar caminhos mais coerentes para seguir.
-        </p>
+        <p>Tudo isso com cuidado, profundidade e, principalmente, no seu ritmo.</p>
 
         <p>
-          Se essa forma de conduzir ressoar em você, este espaço existe para isso.
+          Terapia não é sobre se tornar outra pessoa. É sobre reconhecer partes de si que ficaram silenciadas,
+          ampliar consciência sobre seus movimentos internos e encontrar caminhos mais coerentes para seguir.
         </p>
-        
+
+        <p>Se essa forma de conduzir ressoar em você, este espaço existe para isso.</p>
       </div>
     </div>
   </section>
@@ -411,15 +347,10 @@
     <div class="container">
       <div class="content">
         <h2>Mentoria executiva | Organização interna para decisões importantes</h2>
-        
-        <p>
-          A mentoria executiva é um espaço de reflexão estratégica e aprofundamento psicológico voltado 
-          a profissionais que ocupam posições de responsabilidade, influência ou transição crítica de carreira.
-        </p>
 
         <p>
-          O trabalho acontece a partir de uma leitura cuidadosa da sua realidade, integrando aspectos
-          emocionais, comportamentais e estratégicos.
+          A mentoria executiva é um espaço de reflexão estratégica e aprofundamento psicológico voltado a profissionais
+          que ocupam posições de responsabilidade, influência ou transição crítica de carreira.
         </p>
 
         <p>Trabalho com líderes e executivos que precisam:</p>
@@ -429,35 +360,35 @@
           <li>ampliar clareza interna para escolhas profissionais e pessoais</li>
           <li>revisar padrões de liderança, poder e comunicação</li>
           <li>atravessar transições sem perder identidade</li>
-          <p>
-            Este não é um espaço de motivação ou performance artificial.
-            É um trabalho voltado a pensar melhor, decidir melhor e sustentar o impacto dessas decisões.
-          </p>
-          <p>Os encontros integram:</p>
+        </ul>
+
+        <p>
+          Este não é um espaço de motivação ou performance artificial.
+          É um trabalho voltado a pensar melhor, decidir melhor e sustentar o impacto dessas decisões.
+        </p>
+
+        <p>Os encontros integram:</p>
 
         <ul>
           <li>leitura psicológica dos impasses e comportamentos</li>
           <li>análise do contexto organizacional e relacional</li>
           <li>questionamento direto de aspectos não percebidos, repetições e autoenganos</li>
-                    
         </ul>
-          <p>
-            Não ofereço respostas prontas.
-            Ofereço pensamento crítico, escuta qualificada e confrontação responsável.
-          </p>
 
-          <p>A mentoria é indicada para quem:</p>
+        <p>
+          Não ofereço respostas prontas. Ofereço pensamento crítico, escuta qualificada e confrontação responsável.
+        </p>
+
+        <p>A mentoria é indicada para quem:</p>
 
         <ul>
           <li>já chegou longe, mas percebe que o custo interno está alto</li>
           <li>ocupa cargos de liderança, gestão ou influência técnica</li>
           <li>não busca validação, mas lucidez</li>
           <li>entende que amadurecimento profissional exige trabalho interno</li>
-          <p>
-           Se você espera alguém que te diga exatamente o que fazer, este não é o trabalho. 
-          </p>
+        </ul>
 
-          
+        <p>Se você espera alguém que te diga exatamente o que fazer, este não é o trabalho.</p>
       </div>
     </div>
   </section>
@@ -465,34 +396,35 @@
   <section class="band band-soft" id="sobre">
     <div class="container">
       <div class="sobre-grid">
-     <div class="sobre-img">
-        <img src="foto-sabrina1.jpg" alt="Sabrina Trentin - Psicóloga">
-      </div>     
-        <h2>Um pouco sobre mim e sobre o cuidado que ofereço</h2>
+        <div class="sobre-img">
+          <img src="foto-sabrina2.jpg" alt="Sabrina Trentin - Psicóloga">
+        </div>
 
-        <p>
-          Sou psicóloga há mais de 10 anos e, nesse tempo, acompanhei muitas pessoas tentando se equilibrar
-          enquanto lidavam com as exigências da vida adulta.
-        </p>
+        <div class="sobre-texto">
+          <h2>Um pouco sobre mim e sobre o cuidado que ofereço</h2>
 
-        <p>
-          Conciliei a clínica com minha vivência profissional fora dela, o que me permitiu reconhecer nuances 
-          emocionais que nem sempre aparecem de imediato — e isso sustenta a forma como trabalho hoje, tanto 
-          na psicoterapia quanto na mentoria executiva.
-        </p>
-
-        <p>
-          Na clínica, meu papel é ajudar você a compreender o que sente e o que precisa agora, para que sua 
-          vida fique mais compatível com você.
           <p>
-          Na mentoria, é oferecer clareza, leitura psicológica e pensamento crítico para decisões que 
-          impactam pessoas, estruturas e trajetórias.
-        </p>
-        <p>
-          O espaço que construo diariamente é seguro, humano e tecnicamente preparado para acompanhar o que 
-          está pedindo atenção em você.
-          
-        </p>
+            Sou psicóloga há mais de 10 anos e, nesse tempo, acompanhei muitas pessoas tentando se equilibrar
+            enquanto lidavam com as exigências da vida adulta.
+          </p>
+
+          <p>
+            Conciliei a clínica com minha vivência profissional fora dela, o que me permitiu reconhecer nuances emocionais
+            que nem sempre aparecem de imediato — e isso sustenta a forma como trabalho hoje, tanto na psicoterapia quanto na mentoria executiva.
+          </p>
+
+          <p>
+            Na clínica, meu papel é ajudar você a compreender o que sente e o que precisa agora, para que sua vida fique mais compatível com você.
+          </p>
+
+          <p>
+            Na mentoria, é oferecer clareza, leitura psicológica e pensamento crítico para decisões que impactam pessoas, estruturas e trajetórias.
+          </p>
+
+          <p>
+            O espaço que construo diariamente é seguro, humano e tecnicamente preparado para acompanhar o que está pedindo atenção em você.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -503,8 +435,7 @@
         <h2>Contato</h2>
 
         <p>
-          Se você sente que este pode ser um momento importante para olhar com mais cuidado para o que 
-          está vivendo, podemos conversar.
+          Se você sente que este pode ser um momento importante para olhar com mais cuidado para o que está vivendo, podemos conversar.
         </p>
 
         <a class="btn" href="https://wa.me/5541996257555" target="_blank" rel="noopener">Entrar em contato</a>
@@ -516,12 +447,7 @@
     <p>© Sabrina Trentin • Psicóloga • CRP 08/34629</p>
   </footer>
 
-  <!-- WhatsApp flutuante (premium) -->
-  <a class="wa-float"
-     href="https://wa.me/5541996257555"
-     target="_blank"
-     rel="noopener"
-     aria-label="Falar no WhatsApp">
+  <a class="wa-float" href="https://wa.me/5541996257555" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
     <span class="wa-dot" aria-hidden="true">
       <svg width="20" height="20" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
         <path fill="#fff" d="M19.1 17.4c-.2-.1-1.2-.6-1.4-.7-.2-.1-.4-.1-.6.1l-.5.7c-.2.2-.3.2-.5.1-1-.4-1.8-1-2.5-1.7-.6-.7-1.1-1.6-1.3-2-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.3-.5.1-.2.1-.4 0-.6l-.6-1.5c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.4 5 4.6.7.3 1.2.4 1.7.5.7.1 1.3.1 1.8 0 .5-.1 1.2-.5 1.4-1.1.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.4-.3z"/>
