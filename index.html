@@ -118,13 +118,14 @@
     }
 
     .hero img{
-      width:100%;
-      height:680px;
-      display:block;
-      border-radius:var(--radius);
-      object-fit:cover;
-      object-position: 50% 20%;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  width:100%;
+  height:auto;
+  max-height:720px;
+  display:block;
+  border-radius:var(--radius);
+  object-fit:contain;
+  object-position:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
     }
 
     /* Seções com demarcação minimalista */
@@ -308,9 +309,8 @@
   <section class="band" id="mentoria">
     <div class="container">
       <div class="content">
-        <h2>Mentoria executiva</h2>
-        <h2>Organização interna para decisões importantes</h2>
-
+        <h2>Mentoria executiva | Organização interna para decisões importantes</h2>
+        
         <p>
           A mentoria é voltada a profissionais que ocupam posições de responsabilidade e precisam
           sustentar decisões complexas, muitas vezes em ambientes de pressão.
