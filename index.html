@@ -251,6 +251,37 @@
   margin-bottom: 14px;
 }
 
+    /* Seção Sobre com imagem */
+.sobre-grid{
+  display:grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap:48px;
+  align-items:center;
+}
+
+.sobre-img img{
+  width:100%;
+  height:auto;
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* Responsivo */
+@media (max-width: 900px){
+  .sobre-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-img{
+    order:-1;
+  }
+
+  .sobre-img img{
+    max-height:420px;
+    object-fit:cover;
+  }
+}
+
   </style>
 </head>
 
