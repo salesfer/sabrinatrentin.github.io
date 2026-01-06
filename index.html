@@ -143,14 +143,17 @@
     }
 
     .hero img{
-      width:100%;
-      height:680px;
-      display:block;
-      border-radius:var(--radius);
-      object-fit:cover;
-      object-position:50% 20%;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    }
+  width:100%;
+  height:auto;
+  max-height:720px;
+  display:block;
+  border-radius:var(--radius);
+  object-fit:contain;         /* não amplia/corta */
+  object-position:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  image-rendering:auto;
+}
+
 
     /* Seções */
     .band{
