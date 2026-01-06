@@ -154,7 +154,6 @@
   image-rendering:auto;
 }
 
-
     /* Seções */
     .band{
       padding:76px 20px; /* respiração mais editorial */
@@ -294,15 +293,23 @@
 
     /* Mobile */
     @media (max-width:900px){
-  .hero img{
-    border-radius:16px;
-    margin-top:20px;
-    height:auto;
-    max-height:none;
-  }
-}
+      .hero .container{ grid-template-columns:1fr; }
+      .hero h1{ font-size:40px; }
+      .hero img{
+        height:620px;
+        border-radius:16px;
+        margin-top:20px;
+      }
+      .sobre-grid{ grid-template-columns:1fr; }
+      .sobre-img img{ height:420px; }
+      .sobre-texto h2{ text-align:left; }
+    }
 
-  
+    @media (max-width:480px){
+      .wa-float{ right:14px; bottom:14px; padding:12px; }
+      .wa-label{ display:none; }
+      .wa-dot{ width:46px; height:46px; }
+    }
   </style>
 </head>
 
