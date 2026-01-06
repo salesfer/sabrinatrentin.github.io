@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Sabrina Trentin | Psicóloga</title>
-  <meta name="description" content="Psicoterapia online e mentoria executiva. Um espaço de escuta qualificada, nitidez e maturidade emocional." />
+  <meta name="description" content="Psicoterapia online e mentoria executiva para transições de vida e decisões importantes — escuta qualificada, clareza interna e sustentação emocional." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,10 +22,9 @@
 
       --cta:#a3563a;
       --cta-hover:#8f4a33;
-      --olive:#6F7B68;
     }
 
-    *{box-sizing:border-box}
+    *{ box-sizing:border-box; }
 
     body{
       margin:0;
@@ -33,18 +32,21 @@
       background:var(--bg-main);
       color:var(--text-main);
       line-height:1.6;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     h1,h2,h3{
       font-family:'Playfair Display',serif;
       font-weight:500;
+      letter-spacing:-0.01em;
     }
 
-    a{color:inherit;text-decoration:none}
+    a{ color:inherit; text-decoration:none; }
 
-    section{padding:80px 20px}
-
-    .container{max-width:var(--max);margin:0 auto}
+    section{ padding:80px 20px; }
+    .container{ max-width:var(--max); margin:0 auto; }
 
     /* Header minimalista (apenas nome) */
     .site-header{
@@ -66,43 +68,66 @@
     .brand{
       font-family:'Playfair Display', serif;
       font-size:28px;
-      letter-spacing:0.8px;
+      letter-spacing:0.6px;
       color: var(--text-main);
       font-weight:500;
     }
 
     /* HERO */
-    .hero{
-      padding-top:70px;
-    }
+    .hero{ padding-top:70px; }
 
     .hero .container{
       display:grid;
       grid-template-columns:1.1fr 0.9fr;
-      gap:32px;
+      gap:34px;
       align-items:center;
     }
 
     .hero h1{
-      font-size:42px;
-      line-height:1.15;
-      letter-spacing:-0.02em;
-      font-weight:500;
+      font-size:44px;
+      line-height:1.1;
+      letter-spacing:-0.025em;
       margin:0 0 14px 0;
       text-align:left;
     }
 
     .hero p{
-      max-width:560px;
+      max-width:650px;
       font-size:18px;
-      line-height:1.6;
-      color:var(--text-soft);
-      margin:10px 0 0 0;
+      line-height:1.7;
+      margin:14px 0 0 0; /* ritmo mais leve */
+      color: var(--text-main);
+      font-weight:400;
+    }
+
+    /* Lead (só hierarquia por tamanho e espaçamento) */
+    .hero p.hero-lead{
+      font-size:19px;
+      line-height:1.7;
+      max-width:680px;
+      margin-top:12px;
+    }
+
+    /* Microcopy dos serviços no hero */
+    .hero-services{
+      margin-top:14px;
+      max-width:660px;
+      padding-top:4px;
+    }
+    .hero-services p{
+      margin:8px 0 0 0;
+      font-size:16px;
+      line-height:1.65;
+      color: var(--text-main);
+    }
+    .hero-services strong{
+      color:var(--text-main);
+      font-weight:600;
     }
 
     .btn{
       display:inline-block;
-      margin-top:24px;
+      margin-top:22px;
       padding:14px 28px;
       border-radius:40px;
       background:var(--cta);
@@ -119,24 +144,20 @@
 
     .hero img{
       width:100%;
-      height:auto;
-      max-height:720px;
+      height:680px;
       display:block;
       border-radius:var(--radius);
-      object-fit:contain;
-      object-position:center;
+      object-fit:cover;
+      object-position:50% 20%;
       box-shadow:0 10px 30px rgba(0,0,0,0.08);
     }
 
-    /* Seções com demarcação minimalista */
+    /* Seções */
     .band{
-      padding:72px 20px;
+      padding:76px 20px; /* respiração mais editorial */
       border-top: 1px solid rgba(122,92,69,0.10);
     }
-
-    .band-soft{
-      background: var(--bg-soft);
-    }
+    .band-soft{ background: var(--bg-soft); }
 
     .content{
       max-width:760px;
@@ -146,16 +167,78 @@
     .content h2{
       margin:0 0 14px 0;
       text-align:center;
+      font-size:30px;
+      line-height:1.2;
+      letter-spacing:-0.015em;
     }
 
-    .content p{ margin:14px 0; }
+    .content p{
+      margin:14px 0 0 0; /* remove “bloco tijolo” */
+      color:var(--text-soft);
+      line-height:1.75;
+      font-weight:400;
+    }
+
+    .content p + p{
+      margin-top:14px;
+    }
+
+    /* Lead das seções */
+    .content p.section-lead{
+      color: var(--text-main);
+      font-size:18px;
+      line-height:1.7;
+      margin-top:8px;
+      margin-bottom:18px;
+      font-weight:500;
+    }
 
     .content ul{
-      margin: 14px 0 0 18px;
+      margin: 18px 0 0 18px;
       padding:0;
     }
 
-    .content li{ margin:8px 0; }
+    .content li{
+      margin:8px 0 10px 0;
+      color:var(--text-soft);
+      line-height:1.7;
+    }
+
+    /* Sobre com imagem */
+    .sobre-grid{
+      display:grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap:52px;
+      align-items:center;
+    }
+
+    .sobre-img img{
+      width:100%;
+      height:520px;
+      border-radius:18px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.12);
+      display:block;
+      object-fit:cover;
+      object-position:50% 20%;
+    }
+
+    .sobre-texto h2{
+      margin:0 0 14px 0;
+      text-align:left;
+      font-size:30px;
+      line-height:1.2;
+    }
+
+    .sobre-texto p{
+      margin:14px 0 0 0;
+      color:var(--text-soft);
+      line-height:1.75;
+      font-weight:400;
+    }
+
+    .sobre-texto p + p{
+      margin-top:14px;
+    }
 
     /* Rodapé */
     footer{
@@ -172,24 +255,18 @@
       right:18px;
       bottom:18px;
       z-index:9999;
-
       display:flex;
       align-items:center;
       gap:10px;
-
       padding:12px 14px 12px 12px;
       border-radius:999px;
-
       background:#ffffff;
       color:var(--text-main);
-
       border:1px solid rgba(122,92,69,0.18);
       box-shadow:0 16px 40px rgba(0,0,0,0.14);
-
       font-weight:600;
       font-size:14px;
       letter-spacing:0.2px;
-
       transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
     }
 
@@ -210,106 +287,27 @@
       flex:0 0 auto;
     }
 
-    .wa-label{
-      line-height:1;
-      white-space:nowrap;
-    }
-
-    /* Seção Sobre com imagem + texto agrupado */
-    .sobre-grid{
-      display:grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap:48px;
-      align-items:center;
-    }
-
-    .sobre-img img{
-      width:100%;
-      height:auto;
-      border-radius:18px;
-      box-shadow:0 12px 30px rgba(0,0,0,0.12);
-      display:block;
-    }
-
-    .sobre-texto h2{
-      margin:0 0 14px 0;
-      text-align:left;
-    }
-
-    .sobre-texto p{
-      margin:14px 0;
-      color:var(--text-soft);
-    }
+    .wa-label{ line-height:1; white-space:nowrap; }
 
     /* Mobile */
     @media (max-width:900px){
       .hero .container{ grid-template-columns:1fr; }
-
+      .hero h1{ font-size:40px; }
       .hero img{
-        max-height:620px;
+        height:620px;
         border-radius:16px;
         margin-top:20px;
       }
-
-      .sobre-grid{
-        grid-template-columns:1fr;
-      }
-
-      .sobre-texto h2{
-        text-align:left;
-      }
+      .sobre-grid{ grid-template-columns:1fr; }
+      .sobre-img img{ height:420px; }
+      .sobre-texto h2{ text-align:left; }
     }
 
     @media (max-width:480px){
-      .wa-float{
-        right:14px;
-        bottom:14px;
-        padding:12px;
-      }
+      .wa-float{ right:14px; bottom:14px; padding:12px; }
       .wa-label{ display:none; }
       .wa-dot{ width:46px; height:46px; }
     }
-
-    /* FORÇA o texto-chave do hero */
-.hero p.hero-lead{
-  color: var(--text-main) !important;
-  font-size: 19px;
-  line-height: 1.65;
-  max-width: 620px;
-  margin-top: 12px;
-}
-/* Ritmo de leitura mais elegante */
-.hero p,
-.content p{
-  margin-top: 16px;
-  margin-bottom: 0;
-}
-
-.content ul{
-  margin-top: 18px;
-}
-
-.content li{
-  margin-bottom: 10px;
-}
-
-/* Pausa visual entre blocos grandes */
-.band + .band{
-  margin-top: 0;
-}
-/* Parágrafos de ancoragem das seções */
-.section-lead{
-  font-size: 18px;
-  line-height: 1.65;
-  color: var(--text-main);
-  margin-top: 8px;
-  margin-bottom: 18px;
-}
-
-.content p{
-  color: var(--text-soft);
-}
-
   </style>
 </head>
 
@@ -327,31 +325,34 @@
         <h1>Psicóloga clínica | apoio em transições de vida e decisões que exigem sustentação interna</h1>
 
         <p class="hero-lead">
-          Para pessoas que funcionam bem para o mundo, mas percebem que, internamente, algo já não se organiza 
+          Para pessoas que funcionam bem para o mundo, mas percebem que, internamente, algo já não se organiza
           com a mesma clareza — e sabem que seguir ignorando isso tem custo.
         </p>
 
-        <p class="hero-lead">
+        <p>
           Há momentos em que a vida segue, as responsabilidades continuam sendo cumpridas, mas internamente surge
-          um descompasso difícil de nomear. Decisões adiadas, escolhas sustentadas no automático, uma sensação de 
+          um descompasso difícil de nomear. Decisões adiadas, escolhas sustentadas no automático, uma sensação de
           afastamento de si ou de exaustão silenciosa.
         </p>
-        <p class="hero-lead">
-          Meu trabalho é com pessoas que atravessam momentos de transição — pessoais, profissionais ou 
-          identitários — e reconhecem que pensar melhor, sentir melhor e decidir melhor exige espaço, 
-          presença e responsabilidade.
-          </p>
-        <p class="hero-lead">
-          Aqui não há fórmulas prontas, promessas vazias ou personagens a sustentar. Há escuta qualificada, 
+
+        <p>
+          Meu trabalho é com pessoas que atravessam momentos de transição — pessoais, profissionais ou identitários —
+          e reconhecem que pensar melhor, sentir melhor e decidir melhor exige espaço, presença e responsabilidade.
+        </p>
+
+        <p>
+          Aqui não há fórmulas prontas, promessas vazias ou personagens a sustentar. Há escuta qualificada,
           leitura psicológica cuidadosa e trabalho sério com o que está vivo no aqui e agora.
         </p>
-        
-        <p class="hero-lead">
+
+        <p>
           Atendo em dois formatos distintos, que partem do mesmo fundamento: consciência, maturidade emocional e coerência interna.
         </p>
 
-        <p><strong>Psicoterapia clínica</strong> - Quando o sofrimento emocional pede elaboração, cuidado e tempo.</p>           
-        <p><strong>Mentoria executiva</strong> - Quando a questão central é organizar uma transição ou decisão importante com clareza e sustentação interna.</p>      
+        <div class="hero-services" aria-label="Para quem é cada formato">
+          <p><strong>Psicoterapia clínica:</strong> quando o sofrimento emocional pede elaboração, cuidado e tempo.</p>
+          <p><strong>Mentoria executiva:</strong> quando a questão central é organizar uma transição ou decisão importante com clareza e sustentação interna.</p>
+        </div>
 
         <a class="btn" href="https://wa.me/5541996257555" target="_blank" rel="noopener">Entrar em contato</a>
       </div>
@@ -368,8 +369,8 @@
         <h2>Psicoterapia clínica | Um espaço de escuta e elaboração emocional</h2>
 
         <p class="section-lead">
-  A psicoterapia é indicada quando o sofrimento emocional começa a interferir na forma como a pessoa vive, se relaciona e faz escolhas.
-</p>
+          A psicoterapia é indicada quando o sofrimento emocional começa a interferir na forma como a pessoa vive, se relaciona e faz escolhas.
+        </p>
 
         <p>Existem muitas formas de conduzir um processo terapêutico. Esta é a minha.</p>
 
@@ -395,8 +396,10 @@
           ampliar consciência sobre seus movimentos internos e encontrar caminhos mais coerentes para seguir.
         </p>
 
-        <p><strong>Se essa forma de conduzir ressoa em você, o primeiro passo é uma conversa inicial para avaliarmos 
-          juntos se a psicoterapia é o espaço adequado para este momento da sua vida.</strong></p>
+        <p><strong>
+          Se essa forma de conduzir ressoa em você, o primeiro passo é uma conversa inicial para avaliarmos juntos
+          se a psicoterapia é o espaço adequado para este momento da sua vida.
+        </strong></p>
       </div>
     </div>
   </section>
@@ -433,9 +436,7 @@
           <li>questionamento direto de aspectos não percebidos, repetições e autoenganos</li>
         </ul>
 
-        <p>
-          Não ofereço respostas prontas. Ofereço pensamento crítico, escuta qualificada e confrontação responsável.
-        </p>
+        <p>Não ofereço respostas prontas. Ofereço pensamento crítico, escuta qualificada e confrontação responsável.</p>
 
         <p>A mentoria é indicada para quem:</p>
 
@@ -446,8 +447,10 @@
           <li>entende que amadurecimento profissional exige trabalho interno</li>
         </ul>
 
-        <p><strong>Se esse enquadre faz sentido para você, a mentoria começa por uma conversa inicial de avaliação, 
-          para compreender se este é o trabalho adequado para o momento que você está vivendo.</strong></p>
+        <p><strong>
+          Se esse enquadre faz sentido para você, a mentoria começa por uma conversa inicial de avaliação,
+          para compreender se este é o trabalho adequado para o momento que você está vivendo.
+        </strong></p>
       </div>
     </div>
   </section>
@@ -456,37 +459,37 @@
     <div class="container">
       <div class="sobre-grid">
         <div class="sobre-img">
-          <img src="foto-sabrina2.jpg" alt="Sabrina Trentin - Psicóloga">
+          <img src="foto-sabrina2.jpg" alt="Sabrina Trentin - Psicóloga" loading="lazy">
         </div>
 
         <div class="sobre-texto">
           <h2>Um pouco sobre mim e sobre o cuidado que ofereço</h2>
 
           <p>
-            Sou psicóloga há mais de 10 anos e atuo há 17 anos no mundo corporativo, acompanhando de perto as dinâmicas de poder, tomada de decisão, 
+            Sou psicóloga há mais de 10 anos e atuo há 17 anos no mundo corporativo, acompanhando de perto as dinâmicas de poder, tomada de decisão,
             pressão por resultado, conflitos de valores e desgaste emocional que atravessam a vida adulta.
           </p>
 
           <p>
-            Ao longo da minha trajetória, conciliei a clínica com essa vivência profissional fora dela. Isso me permitiu desenvolver uma leitura psicológica 
+            Ao longo da minha trajetória, conciliei a clínica com essa vivência profissional fora dela. Isso me permitiu desenvolver uma leitura psicológica
             mais refinada, capaz de identificar nuances emocionais que nem sempre aparecem de forma explícita — especialmente em pessoas altamente funcionais,
             responsáveis e exigentes consigo mesmas.
           </p>
 
-          <p>
-            Essa integração sustenta a forma como trabalho hoje.
-          </p>
+          <p>Essa integração sustenta a forma como trabalho hoje.</p>
 
           <p>
-            Na psicoterapia, meu papel é ajudar você a compreender o que sente, o que sustenta seus padrões e o que precisa ser reorganizado agora, para que sua 
-            vida fique mais compatível com quem você é — e não apenas com o que esperam de você.
+            Na psicoterapia, meu papel é ajudar você a compreender o que sente, o que sustenta seus padrões e o que precisa ser reorganizado agora,
+            para que sua vida fique mais compatível com quem você é — e não apenas com o que esperam de você.
           </p>
+
           <p>
             Na mentoria executiva, ofereço clareza, pensamento crítico e análise psicológica aplicada a decisões que impactam pessoas, estruturas e trajetórias profissionais,
             considerando não apenas o resultado imediato, mas os efeitos humanos e estratégicos dessas escolhas.
+          </p>
 
           <p>
-            O espaço que construo é seguro, humano e tecnicamente preparado para acompanhar o que, de fato, está pedindo atenção em você — sem atalhos, sem fórmulas prontas e 
+            O espaço que construo é seguro, humano e tecnicamente preparado para acompanhar o que, de fato, está pedindo atenção em você — sem atalhos, sem fórmulas prontas e
             sem promessas superficiais.
           </p>
         </div>
@@ -499,9 +502,7 @@
       <div class="content">
         <h2>Contato</h2>
 
-        <p>
-          Se você sente que este pode ser um momento importante para olhar com mais cuidado para o que está vivendo, podemos conversar.
-        </p>
+        <p>Se você sente que este pode ser um momento importante para olhar com mais cuidado para o que está vivendo, podemos conversar.</p>
 
         <a class="btn" href="https://wa.me/5541996257555" target="_blank" rel="noopener">Entrar em contato</a>
       </div>
@@ -514,10 +515,10 @@
 
   <a class="wa-float" href="https://wa.me/5541996257555" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
     <span class="wa-dot" aria-hidden="true">
-      <svg width="20" height="20" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-        <path fill="#fff" d="M19.1 17.4c-.2-.1-1.2-.6-1.4-.7-.2-.1-.4-.1-.6.1l-.5.7c-.2.2-.3.2-.5.1-1-.4-1.8-1-2.5-1.7-.6-.7-1.1-1.6-1.3-2-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.3-.5.1-.2.1-.4 0-.6l-.6-1.5c-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.4 5 4.6.7.3 1.2.4 1.7.5.7.1 1.3.1 1.8 0 .5-.1 1.2-.5 1.4-1.1.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.4-.3z"/>
-        <path fill="#fff" d="M26.9 5.1C24 2.3 20.2.7 16.2.7 8.2.7 1.7 7.2 1.7 15.2c0 2.5.7 5 2 7.2L1.6 31.3l9.1-2.4c2.1 1.2 4.6 1.8 6.9 1.8 8 0 14.5-6.5 14.5-14.5 0-4-1.6-7.8-4.2-10.6zm-10.7 23c-2.2 0-4.3-.6-6.2-1.7l-.4-.2-5.4 1.4 1.4-5.3-.2-.4c-1.2-2-1.9-4.3-1.9-6.7 0-6.9 5.6-12.5 12.5-12.5 3.3 0 6.5 1.3 8.8 3.6 2.4 2.4 3.7 5.5 3.7 8.9 0 6.9-5.6 12.5-12.5 12.5z"/>
-      </svg>
+      <svg width="20" height="20" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path fill="#fff" d="M16.02 2.01C8.27 2.01 2 8.28 2 16.03c0 2.48.65 4.9 1.88 7.04L2 30l7.12-1.85a13.9 13.9 0 0 0 6.9 1.77h.01c7.75 0 14.02-6.27 14.02-14.02 0-3.75-1.46-7.27-4.11-9.92a13.94 13.94 0 0 0-9.92-4.11zm0 25.7c-2.21 0-4.37-.6-6.25-1.74l-.45-.27-4.23 1.1 1.13-4.12-.29-.42a11.67 11.67 0 0 1-1.78-6.23c0-6.47 5.27-11.74 11.75-11.74 3.14 0 6.09 1.22 8.31 3.44a11.66 11.66 0 0 1 3.44 8.31c0 6.47-5.27 11.74-11.73 11.74zm6.44-8.82c-.35-.18-2.06-1.02-2.38-1.14-.32-.12-.56-.18-.8.18-.24.35-.92 1.14-1.12 1.38-.21.24-.41.27-.76.09-.35-.18-1.48-.55-2.82-1.74-1.04-.93-1.75-2.08-1.96-2.43-.21-.35-.02-.54.16-.72.16-.16.35-.41.53-.62.18-.21.24-.35.35-.59.12-.24.06-.44-.03-.62-.09-.18-.8-1.94-1.1-2.66-.29-.7-.59-.61-.8-.62l-.68-.01c-.24 0-.62.09-.95.44-.32.35-1.25 1.22-1.25 2.97s1.28 3.44 1.46 3.68c.18.24 2.52 3.84 6.11 5.38.85.37 1.52.59 2.04.75.86.27 1.64.23 2.26.14.69-.1 2.06-.84 2.35-1.65.29-.81.29-1.51.2-1.65-.09-.14-.32-.23-.67-.41z"/>
+</svg>
+
     </span>
     <span class="wa-label">WhatsApp</span>
   </a>
