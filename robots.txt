@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://salesfer.github.io/sabrinatrentin.github.io/sitemap.xml
